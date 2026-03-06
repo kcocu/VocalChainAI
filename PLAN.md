@@ -190,10 +190,14 @@
 
 ### 3-4. Cubase 연동 (실험적)
 
-Cubase의 Track Preset (.trackpreset) 또는 Channel Strip Preset 생성:
-- .trackpreset 형식이 비공개이므로 리버스 엔지니어링 필요
-- 현실적 대안: Cubase의 Generic Remote 또는 MIDI Remote 스크립트
-- **위험도 높음** — 충분한 조사 후 별도 브랜치에서 실험
+**조사 결과 요약:**
+- `.trackpreset` — XML 기반, 스키마 비공개이지만 리버스 엔지니어링 가능
+- `.fxchainpreset` — XML 기반, 플러그인 상태는 hex-encoded binary
+- `.vstpreset` — 48바이트 헤더(VST3 + ClassID) + Comp/Info 청크, VST3 SDK 문서화됨
+- **MIDI Remote API** — MIDI 하드웨어 컨트롤러 전용, HTTP/WebSocket 없음 → 외부 앱에서 값 푸시 불가
+- **실현 가능한 접근**: StudioEQ .vstpreset 생성 (바이너리 리버스 엔지니어링 필요)
+- **차선책**: .fxchainpreset XML 생성 (플러그인 UID + hex 상태 필요)
+- **위험도 높음** — 별도 브랜치에서 실험, 충분한 테스트 후 머지
 
 ---
 
@@ -347,13 +351,38 @@ frontend/
 
 | 모드 | 특성 | 적합한 용도 |
 |------|------|-----------|
-| Studio Tape | 깔끔한 테이프 | 팝/발라드 기본 |
-| EchoPlex | 따뜻한 아날로그 | R&B/Soul |
-| Space Echo | 빈티지 더빙 | 레게/인디 |
-| DM-2 | 어두운 아날로그 | 다크/무디 |
+| Studio Tape | 깔끔한 테이프 (ATR-102 15ips) | 팝/발라드 기본 |
+| EchoPlex | 따뜻한 아날로그 (EP-3 solid state) | R&B/Soul |
+| Space Echo | 빈티지 더빙 (Roland RE-201) | 레게/인디 |
+| DM-2 | 어두운 BBD 아날로그 (Boss DM-2) | 다크/무디 |
 | Digital | 정확한 디지털 | EDM/정밀한 믹스 |
-| Memory Man | 코러스 딜레이 | 인디/얼터너티브 |
+| Memory Man | EHX 아날로그 (약간 더티) | 인디/얼터너티브 |
+| Master Tape | 고품질 테이프 (ATR-102 30ips) | 록/프로덕션 |
+| Tube Tape | 진공관 테이프 새츄 | 빈티지/웜 |
+| Saturated | 과도한 테이프 디스토션 | 이펙트/크리에이티브 |
 | Binsonette | 드럼 머신 에코 | 실험적 |
+
+**EchoBoy 에코 모드**: Single / Dual / Ping-Pong / Rhythm (16탭)
+**핵심 컨트롤**: Time, Mix, Feedback, Width, Saturation, Wobble, Groove/Feel/Accent
+
+### 장르별 리버브 디케이 퀵 레퍼런스
+
+| 장르 | 디케이 | 리버브 타입 | 프리딜레이 | 특성 |
+|------|--------|-----------|----------|------|
+| Pop | 1.0-1.8s | Plate | 20-40ms | 밝고 부드러운 |
+| R&B | 1.5-2.5s | Plate/Chamber | 25-50ms | 풍성하고 깔끔 |
+| Hip-Hop | 0.5-1.2s | Room/Short Plate | 10-20ms | 타이트, 다음 단어 전에 끝남 |
+| Rock | 1.2-2.5s | Hall/Plate | 20-40ms | 넓고 존재감 |
+| Ballad | 2.0-5.0s | Hall/Large Plate | 40-80ms | 감성적, 긴 테일 |
+| EDM | 0.8-1.5s | Plate/Room | 10-30ms | 짧고 깨끗, 사이드체인 덕킹 |
+| Jazz | 1.5-3.0s | Chamber/Plate | 20-50ms | 따뜻한 빈티지 |
+
+### Send 라우팅 핵심 팁
+
+- 리버브/딜레이는 **항상 Send (AUX)로 라우팅** — 플러그인 100% Wet
+- **포스트 페이더 Send** 권장 — 보컬 페이더 따라 자동 조절
+- **리버브 리턴 채널에 EQ**: HPF 200-600Hz, LPF 6-10kHz (Abbey Road 테크닉)
+- 프리딜레이: 20-50ms가 팝/R&B 보컬에 가장 범용
 
 ### 리버브 타입별 가이드
 
