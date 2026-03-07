@@ -3,6 +3,9 @@ import ChainSelector from "./components/ChainSelector";
 import ChainResult from "./components/ChainResult";
 import ExportPanel from "./components/ExportPanel";
 import CustomBuilder from "./components/CustomBuilder";
+import ReferencePanel from "./components/ReferencePanel";
+import CubaseGuide from "./components/CubaseGuide";
+import AudioSimulator from "./components/AudioSimulator";
 import { generateChain } from "./data/chains";
 
 function useLocalStorage(key, initial) {
@@ -137,13 +140,19 @@ export default function App() {
 
       <CustomBuilder onApply={(customChain) => setChain(customChain)} />
 
+      <ReferencePanel genre={genre} vocalType={vocalType} mood={mood} />
+
       <ChainResult
         chain={chain}
         isFavorite={isFavorite}
         onToggleFavorite={chain ? handleToggleFavorite : null}
       />
 
+      <AudioSimulator chain={chain} />
+
       <ExportPanel chain={chain} />
+
+      <CubaseGuide />
 
       <footer className="site-footer">
         <p>VocalChainAI &mdash; EQ, Compressor, Delay, Reverb settings for vocal production</p>

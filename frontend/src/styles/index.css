@@ -698,6 +698,230 @@ body {
   color: #fff;
 }
 
+/* ─── Reference Panel ─── */
+.reference-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+.reference-panel h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+.reference-hint {
+  font-size: 0.75rem;
+  color: var(--text2);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.reference-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+.reference-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.reference-main {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+.reference-artist {
+  font-weight: 600;
+  color: var(--accent2);
+  font-size: 0.85rem;
+}
+.reference-track {
+  color: var(--text);
+  font-size: 0.82rem;
+}
+.reference-note {
+  color: var(--text2);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* ─── Audio Simulator ─── */
+.audio-simulator {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+.audio-simulator h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+.audio-hint {
+  font-size: 0.75rem;
+  color: var(--text2);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.audio-upload {
+  display: block;
+}
+.audio-upload input[type="file"] {
+  display: none;
+}
+.audio-upload span {
+  display: block;
+  padding: 10px 16px;
+  background: var(--surface2);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--text2);
+  font-family: var(--font);
+  font-size: 0.82rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s;
+}
+.audio-upload span:hover {
+  border-color: var(--accent);
+  color: var(--accent2);
+}
+.audio-buttons {
+  display: flex;
+  gap: 8px;
+}
+.audio-btn {
+  flex: 1;
+  padding: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  transition: all 0.15s;
+}
+.audio-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+.audio-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.audio-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.audio-btn.wet {
+  border-color: var(--boost);
+}
+.audio-btn.wet.active {
+  background: var(--boost);
+  border-color: var(--boost);
+}
+.audio-btn.stop {
+  flex: 0.5;
+  border-color: var(--cut);
+  color: var(--cut);
+}
+.audio-btn.stop:hover:not(:disabled) {
+  background: var(--cut);
+  color: #fff;
+}
+
+/* ─── Cubase Guide ─── */
+.cubase-guide-toggle {
+  margin-top: 16px;
+}
+.cubase-guide {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 16px;
+}
+.guide-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.guide-tab {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.78rem;
+  transition: all 0.15s;
+}
+.guide-tab:hover {
+  border-color: var(--accent);
+}
+.guide-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.guide-content {
+  background: var(--surface2);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+.guide-content h4 {
+  color: var(--accent2);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.guide-steps {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+.guide-steps li {
+  color: var(--text);
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.guide-tips {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+.guide-tips h5 {
+  color: var(--boost);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.guide-tips ul {
+  padding-left: 18px;
+}
+.guide-tips li {
+  color: var(--text2);
+  font-size: 0.78rem;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
 /* ─── Footer ─── */
 .site-footer {
   text-align: center;
