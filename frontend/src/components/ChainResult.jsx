@@ -1,14 +1,28 @@
-import { useRef } from "react";
 import EQDisplay from "./EQDisplay";
+import InfoTooltip from "./InfoTooltip";
+
+const CATEGORY_MAP = {
+  "Compressor": "comp",
+  "De-Esser": "deesser",
+  "Delay": "delay",
+  "Reverb": "reverb",
+  "Pitch Correction": "pitch",
+  "Saturation": "saturation",
+  "Vocal Doubling": "doubling",
+};
 
 function PluginCard({ id, step, title, data, color }) {
   if (!data) return null;
   const skipKeys = new Set(["label", "note", "plugin", "plugins", "eqTip"]);
   const entries = Object.entries(data).filter(([k]) => !skipKeys.has(k));
+  const category = CATEGORY_MAP[title] || title.toLowerCase();
 
   return (
     <div id={id} className={`chain-block plugin-card ${color || ""}`}>
-      <h3>{step}. {title} — {data.label || ""}</h3>
+      <h3>
+        {step}. {title} — {data.label || ""}
+        {data.type && <InfoTooltip category={category} param={data.type} />}
+      </h3>
       {data.plugin && <div className="plugin-name">{data.plugin}</div>}
       {data.plugins && (
         <div className="plugin-name">
@@ -18,7 +32,10 @@ function PluginCard({ id, step, title, data, color }) {
       <div className="plugin-params">
         {entries.map(([key, val]) => (
           <div key={key} className="param-row">
-            <span className="param-key">{key}</span>
+            <span className="param-key">
+              {key}
+              <InfoTooltip category={category} param={key} />
+            </span>
             <span className="param-val">{Array.isArray(val) ? val.join(", ") : val}</span>
           </div>
         ))}

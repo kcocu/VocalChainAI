@@ -511,6 +511,65 @@ body {
 .eq-table td.cut { color: var(--cut); }
 .eq-table td.note { color: var(--text2); font-style: italic; }
 
+/* ─── Info Tooltip ─── */
+.info-tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+}
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-size: 10px;
+  font-family: var(--font);
+  font-weight: 700;
+  cursor: help;
+  padding: 0;
+  line-height: 1;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.info-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.info-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  width: 280px;
+  max-width: 90vw;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+.info-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--accent);
+}
+
 /* ─── Custom Builder ─── */
 .custom-builder-toggle {
   text-align: center;
