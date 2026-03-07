@@ -97,6 +97,42 @@ const CHAIN_MATRIX = {
       dark:   { eq: "jazz_male", comp: "opto_smooth", deesser: "gentle_preserve", delay: "memory_man", reverb: "valhalla_vintage_dark", saturation: "tape_saturation", pitch: null, doubling: null },
     },
   },
+  acoustic: {
+    female: {
+      bright: { eq: "acoustic_female", comp: "gentle", deesser: "gentle_preserve", delay: "studio_tape", reverb: "valhalla_room", saturation: null, pitch: "natural", doubling: null },
+      warm:   { eq: "acoustic_female", comp: "opto_smooth", deesser: "female", delay: "echoplex", reverb: "uad_capitol", saturation: "subtle_warmth", pitch: "natural", doubling: null },
+      dark:   { eq: "acoustic_female", comp: "gentle", deesser: "gentle_preserve", delay: "memory_man", reverb: "lexicon_hall", saturation: "tape_saturation", pitch: "natural", doubling: null },
+    },
+    male: {
+      bright: { eq: "acoustic_male", comp: "gentle", deesser: "gentle_preserve", delay: "studio_tape", reverb: "valhalla_room", saturation: null, pitch: "natural", doubling: null },
+      warm:   { eq: "acoustic_male", comp: "opto_smooth", deesser: "male", delay: "echoplex", reverb: "arturia_rev_plate", saturation: "tube_warmth", pitch: "natural", doubling: null },
+      dark:   { eq: "acoustic_male", comp: "vari_mu_warm", deesser: "gentle_preserve", delay: "memory_man", reverb: "valhalla_vintage_dark", saturation: "tape_saturation", pitch: "natural", doubling: null },
+    },
+  },
+  kpop: {
+    female: {
+      bright: { eq: "kpop_female", comp: "vca_transparent", deesser: "female_bright", delay: "studio_tape", reverb: "fabfilter_pro_r", saturation: null, pitch: "natural", doubling: "microshift" },
+      warm:   { eq: "kpop_female", comp: "medium", deesser: "female", delay: "echoplex", reverb: "valhalla_vintage_plate", saturation: "subtle_warmth", pitch: "natural", doubling: "subtle_double" },
+      dark:   { eq: "kpop_female", comp: "medium", deesser: "female", delay: "dm2_dark", reverb: "native_instruments_raum", saturation: "tape_saturation", pitch: "natural", doubling: null },
+    },
+    male: {
+      bright: { eq: "kpop_male", comp: "vca_transparent", deesser: "male", delay: "studio_tape", reverb: "fabfilter_pro_r", saturation: null, pitch: "natural", doubling: "microshift" },
+      warm:   { eq: "kpop_male", comp: "medium", deesser: "male", delay: "echoplex", reverb: "valhalla_vintage_plate", saturation: "subtle_warmth", pitch: "natural", doubling: "subtle_double" },
+      dark:   { eq: "kpop_male", comp: "opto_smooth", deesser: "male", delay: "dm2_dark", reverb: "valhalla_vintage_dark", saturation: "tape_saturation", pitch: "natural", doubling: null },
+    },
+  },
+  country: {
+    female: {
+      bright: { eq: "country_female", comp: "medium", deesser: "female", delay: "slapback", reverb: "valhalla_vintage_plate", saturation: null, pitch: "natural", doubling: null },
+      warm:   { eq: "country_female", comp: "opto_smooth", deesser: "female", delay: "echoplex", reverb: "uad_capitol", saturation: "subtle_warmth", pitch: "natural", doubling: null },
+      dark:   { eq: "country_female", comp: "gentle", deesser: "gentle_preserve", delay: "master_tape", reverb: "lexicon_hall", saturation: "tape_saturation", pitch: "natural", doubling: null },
+    },
+    male: {
+      bright: { eq: "country_male", comp: "medium", deesser: "male", delay: "slapback", reverb: "valhalla_vintage_plate", saturation: null, pitch: "natural", doubling: null },
+      warm:   { eq: "country_male", comp: "opto_smooth", deesser: "male", delay: "echoplex", reverb: "arturia_rev_plate", saturation: "tube_warmth", pitch: "natural", doubling: null },
+      dark:   { eq: "country_male", comp: "vari_mu_warm", deesser: "gentle_preserve", delay: "master_tape", reverb: "valhalla_vintage_dark", saturation: "tape_saturation", pitch: "natural", doubling: null },
+    },
+  },
 };
 
 export function generateChain(genre, vocalType, mood) {
@@ -123,6 +159,9 @@ export const GENRES = [
   { id: "ballad", label: "Ballad" },
   { id: "edm", label: "EDM / Electronic" },
   { id: "jazz", label: "Jazz" },
+  { id: "acoustic", label: "Acoustic" },
+  { id: "kpop", label: "K-Pop" },
+  { id: "country", label: "Country / Folk" },
 ];
 
 export const VOCAL_TYPES = [

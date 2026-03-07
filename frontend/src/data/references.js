@@ -252,4 +252,112 @@ export const REFERENCES = {
       ],
     },
   },
+  acoustic: {
+    female: {
+      bright: [
+        { artist: "Taylor Swift", track: "Love Story", note: "밝은 어쿠스틱 팝 보컬" },
+        { artist: "Jewel", track: "You Were Meant For Me", note: "선명한 포크 보컬" },
+        { artist: "Colbie Caillat", track: "Bubbly", note: "밝고 자연스러운 어쿠스틱" },
+      ],
+      warm: [
+        { artist: "Norah Jones", track: "Don't Know Why", note: "따뜻한 어쿠스틱 재즈 팝" },
+        { artist: "Joni Mitchell", track: "A Case of You", note: "따뜻한 포크 보컬의 정석" },
+        { artist: "Tracy Chapman", track: "Fast Car", note: "깊고 따뜻한 포크" },
+      ],
+      dark: [
+        { artist: "Phoebe Bridgers", track: "Motion Sickness", note: "다크 인디 포크" },
+        { artist: "Mazzy Star", track: "Fade Into You", note: "드리미 다크 어쿠스틱" },
+        { artist: "Iron & Wine", track: "Flightless Bird", note: "섬세하고 어두운 포크" },
+      ],
+    },
+    male: {
+      bright: [
+        { artist: "Jason Mraz", track: "I'm Yours", note: "밝고 경쾌한 어쿠스틱" },
+        { artist: "Jack Johnson", track: "Better Together", note: "선명한 어쿠스틱 팝" },
+        { artist: "Ed Sheeran", track: "Thinking Out Loud", note: "밝은 어쿠스틱 발라드" },
+      ],
+      warm: [
+        { artist: "John Mayer", track: "Gravity", note: "따뜻한 블루스 어쿠스틱" },
+        { artist: "James Taylor", track: "Fire and Rain", note: "클래식 따뜻한 포크" },
+        { artist: "Nick Drake", track: "Pink Moon", note: "인티밋한 포크" },
+      ],
+      dark: [
+        { artist: "Bon Iver", track: "Skinny Love", note: "다크 인디 포크" },
+        { artist: "Elliott Smith", track: "Between the Bars", note: "어둡고 섬세한 포크" },
+        { artist: "Sufjan Stevens", track: "Fourth of July", note: "다크 인디 포크" },
+      ],
+    },
+  },
+  kpop: {
+    female: {
+      bright: [
+        { artist: "aespa", track: "Supernova", note: "선명하고 밝은 K-Pop 프로덕션" },
+        { artist: "IVE", track: "LOVE DIVE", note: "깔끔한 모던 K-Pop" },
+        { artist: "TWICE", track: "Feel Special", note: "밝은 걸그룹 보컬" },
+      ],
+      warm: [
+        { artist: "IU", track: "Celebrity", note: "따뜻하고 세련된 K-Pop" },
+        { artist: "태연", track: "Rain", note: "감성적 K-Pop 발라드" },
+        { artist: "BLACKPINK Rose", track: "On The Ground", note: "따뜻한 솔로 보컬" },
+      ],
+      dark: [
+        { artist: "BLACKPINK", track: "How You Like That", note: "다크하고 파워풀한 K-Pop" },
+        { artist: "(G)I-DLE", track: "TOMBOY", note: "다크 컨셉 K-Pop" },
+        { artist: "Red Velvet", track: "Psycho", note: "다크 R&B K-Pop" },
+      ],
+    },
+    male: {
+      bright: [
+        { artist: "BTS", track: "Dynamite", note: "밝고 에너지 넘치는 K-Pop" },
+        { artist: "SEVENTEEN", track: "Super", note: "선명한 보이그룹 보컬" },
+        { artist: "TXT", track: "Sugar Rush Ride", note: "모던 밝은 K-Pop" },
+      ],
+      warm: [
+        { artist: "BTS V", track: "Slow Dancing", note: "따뜻한 솔로 보컬" },
+        { artist: "EXO", track: "Love Shot", note: "따뜻한 R&B K-Pop" },
+        { artist: "성시경", track: "거리에서", note: "따뜻한 K-발라드" },
+      ],
+      dark: [
+        { artist: "Stray Kids", track: "God's Menu", note: "다크하고 강렬한 K-Pop" },
+        { artist: "ATEEZ", track: "Guerrilla", note: "다크 퍼포먼스 K-Pop" },
+        { artist: "BTS", track: "Black Swan", note: "다크 아트 K-Pop" },
+      ],
+    },
+  },
+  country: {
+    female: {
+      bright: [
+        { artist: "Carrie Underwood", track: "Before He Cheats", note: "파워풀하고 밝은 컨트리" },
+        { artist: "Kacey Musgraves", track: "Follow Your Arrow", note: "밝은 모던 컨트리" },
+        { artist: "Taylor Swift", track: "Our Song", note: "밝은 컨트리 팝" },
+      ],
+      warm: [
+        { artist: "Dolly Parton", track: "Jolene", note: "따뜻한 클래식 컨트리" },
+        { artist: "Emmylou Harris", track: "Wrecking Ball", note: "따뜻한 컨트리 포크" },
+        { artist: "Brandi Carlile", track: "The Story", note: "파워풀하고 따뜻한 포크" },
+      ],
+      dark: [
+        { artist: "Kacey Musgraves", track: "Space Cowboy", note: "무디한 컨트리 발라드" },
+        { artist: "Miranda Lambert", track: "The House That Built Me", note: "감성적 컨트리" },
+        { artist: "Maren Morris", track: "My Church", note: "깊은 컨트리 소울" },
+      ],
+    },
+    male: {
+      bright: [
+        { artist: "Luke Bryan", track: "Country Girl", note: "밝은 모던 컨트리" },
+        { artist: "Keith Urban", track: "Somebody Like You", note: "밝은 컨트리 록" },
+        { artist: "Blake Shelton", track: "Honey Bee", note: "선명한 컨트리" },
+      ],
+      warm: [
+        { artist: "Johnny Cash", track: "Ring of Fire", note: "따뜻한 클래식 컨트리의 전설" },
+        { artist: "Chris Stapleton", track: "Tennessee Whiskey", note: "깊고 따뜻한 컨트리 소울" },
+        { artist: "Vince Gill", track: "Go Rest High", note: "따뜻한 컨트리 발라드" },
+      ],
+      dark: [
+        { artist: "Chris Stapleton", track: "Broken Halos", note: "깊고 어두운 컨트리 소울" },
+        { artist: "Sturgill Simpson", track: "Turtles All the Way Down", note: "다크 아웃로 컨트리" },
+        { artist: "Tyler Childers", track: "Feathered Indians", note: "다크 블루그래스" },
+      ],
+    },
+  },
 };

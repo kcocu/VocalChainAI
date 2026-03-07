@@ -80,7 +80,7 @@ export default function App() {
   };
 
   const labelMap = {
-    pop: "Pop", rnb: "R&B", hiphop: "Hip-Hop", rock: "Rock", ballad: "Ballad", edm: "EDM", jazz: "Jazz",
+    pop: "Pop", rnb: "R&B", hiphop: "Hip-Hop", rock: "Rock", ballad: "Ballad", edm: "EDM", jazz: "Jazz", acoustic: "Acoustic", kpop: "K-Pop", country: "Country",
     female: "Female", male: "Male",
     bright: "Bright", warm: "Warm", dark: "Dark",
   };

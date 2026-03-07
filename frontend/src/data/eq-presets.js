@@ -190,6 +190,72 @@ export const EQ_PRESETS = {
     ],
   },
 
+  // ─── Acoustic ───
+  acoustic_female: {
+    label: "Female Acoustic — Natural & Airy",
+    bands: [
+      { type: "HPF", freq: 90, gain: 0, q: 0.7 },
+      { type: "Bell", freq: 200, gain: 1, q: 1.0, note: "자연스러운 바디" },
+      { type: "Bell", freq: 400, gain: -2, q: 1.5, note: "Mud 제거" },
+      { type: "Bell", freq: 3000, gain: 2, q: 1.5, note: "부드러운 Presence" },
+      { type: "HShelf", freq: 10000, gain: 2, q: 0.7, note: "에어리한 탑엔드" },
+    ],
+  },
+  acoustic_male: {
+    label: "Male Acoustic — Warm & Organic",
+    bands: [
+      { type: "HPF", freq: 70, gain: 0, q: 0.7 },
+      { type: "Bell", freq: 150, gain: 1.5, q: 1.0, note: "따뜻한 Chest" },
+      { type: "Bell", freq: 350, gain: -2, q: 1.5, note: "Mud 정리" },
+      { type: "Bell", freq: 2500, gain: 2, q: 1.5, note: "자연스러운 Presence" },
+      { type: "HShelf", freq: 9000, gain: 1.5, q: 0.7, note: "적당한 Air" },
+    ],
+  },
+
+  // ─── K-Pop ───
+  kpop_female: {
+    label: "K-Pop Female — Crystal Clear",
+    bands: [
+      { type: "HPF", freq: 120, gain: 0, q: 0.7 },
+      { type: "Bell", freq: 250, gain: -3, q: 1.5, note: "깔끔한 저역 정리" },
+      { type: "Bell", freq: 3500, gain: 3.5, q: 1.2, note: "강한 Presence" },
+      { type: "Bell", freq: 6000, gain: 2, q: 1.0, note: "선명한 밝기" },
+      { type: "HShelf", freq: 13000, gain: 3, q: 0.7, note: "반짝이는 Air" },
+    ],
+  },
+  kpop_male: {
+    label: "K-Pop Male — Clean & Modern",
+    bands: [
+      { type: "HPF", freq: 90, gain: 0, q: 0.7 },
+      { type: "Bell", freq: 200, gain: -2, q: 1.5, note: "깔끔한 저역" },
+      { type: "Bell", freq: 3000, gain: 3, q: 1.2, note: "모던 Presence" },
+      { type: "Bell", freq: 5000, gain: 2, q: 1.0, note: "명료도" },
+      { type: "HShelf", freq: 12000, gain: 2.5, q: 0.7, note: "밝은 Air" },
+    ],
+  },
+
+  // ─── Country/Folk ───
+  country_female: {
+    label: "Female Country — Bright & Twangy",
+    bands: [
+      { type: "HPF", freq: 100, gain: 0, q: 0.7 },
+      { type: "Bell", freq: 250, gain: -2, q: 1.5, note: "깔끔한 로우 미드" },
+      { type: "Bell", freq: 2000, gain: 2, q: 1.2, note: "내추럴 Presence" },
+      { type: "Bell", freq: 5000, gain: 2.5, q: 1.0, note: "밝은 Twang" },
+      { type: "HShelf", freq: 12000, gain: 2, q: 0.7, note: "에어리한 탑" },
+    ],
+  },
+  country_male: {
+    label: "Male Country — Full & Rich",
+    bands: [
+      { type: "HPF", freq: 70, gain: 0, q: 0.7 },
+      { type: "Bell", freq: 180, gain: 1.5, q: 1.0, note: "풍성한 바디" },
+      { type: "Bell", freq: 400, gain: -2.5, q: 1.5, note: "Mud 정리" },
+      { type: "Bell", freq: 2500, gain: 2, q: 1.5, note: "자연스러운 Presence" },
+      { type: "HShelf", freq: 10000, gain: 1.5, q: 0.7, note: "따뜻한 Air" },
+    ],
+  },
+
   // ─── Special ───
   spoken_word: {
     label: "Narration / Podcast — Clear & Present",

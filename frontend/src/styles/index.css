@@ -933,13 +933,94 @@ body {
 }
 
 /* ─── Responsive ─── */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .app { max-width: 100%; }
+  .reference-list { grid-template-columns: 1fr 1fr; }
+  .custom-categories { grid-template-columns: 1fr 1fr; }
+  .guide-tabs { gap: 4px; }
+  .guide-tab { font-size: 0.72rem; padding: 5px 10px; }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
-  .app { padding: 12px; }
-  .app-header h1 { font-size: 1.8rem; }
-  .plugin-params { grid-template-columns: 1fr; }
-  .flow-path { flex-direction: column; align-items: flex-start; }
-  .flow-path-label { width: auto; text-align: left; }
+  .app { padding: 10px; }
+  .app-header { padding: 24px 0 18px; }
+  .app-header h1 { font-size: 1.6rem; }
+  .app-header p { font-size: 0.85rem; }
+  .header-top { gap: 10px; }
+  .theme-toggle { width: 34px; height: 34px; font-size: 1.1rem; }
+
+  /* Selector */
+  .chain-selector { padding: 16px; }
+  .selector-buttons { gap: 6px; }
+  .sel-btn { padding: 6px 12px; font-size: 0.78rem; }
+  .generate-btn { padding: 12px; font-size: 0.9rem; }
+
+  /* Signal flow */
+  .signal-flow { padding: 12px; }
+  .flow-path { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .flow-path-label { width: auto; text-align: left; font-size: 0.6rem; }
   .flow-nodes { gap: 3px; }
   .flow-node { font-size: 0.7rem; padding: 4px 8px; }
   .flow-send-branch { padding-left: 12px; }
+
+  /* Plugin cards */
+  .chain-block { padding: 14px; border-radius: 10px; }
+  .plugin-params { grid-template-columns: 1fr; }
+  .param-row { font-size: 0.78rem; }
+
+  /* EQ */
+  .eq-graph-wrap { padding: 8px; }
+  .eq-table { font-size: 0.75rem; }
+  .eq-table th { font-size: 0.68rem; padding: 4px 6px; }
+  .eq-table td { padding: 4px 6px; }
+  .eq-drag-hint { font-size: 0.7rem; }
+
+  /* Tooltip */
+  .info-tooltip { width: 240px; font-size: 0.72rem; left: 0; transform: none; }
+  .info-tooltip::after { left: 12px; }
+
+  /* Presets / Favorites */
+  .presets-panel { padding: 12px 14px; }
+  .preset-btn { font-size: 0.75rem; padding: 5px 10px; }
+
+  /* Reference */
+  .reference-list { grid-template-columns: 1fr; }
+  .reference-card { padding: 8px 10px; }
+
+  /* Export */
+  .export-buttons { gap: 6px; }
+  .export-btn { padding: 6px 12px; font-size: 0.75rem; flex: 1; min-width: 0; text-align: center; }
+
+  /* Audio */
+  .audio-buttons { flex-direction: column; }
+  .audio-btn { flex: unset; }
+  .audio-btn.stop { flex: unset; }
+
+  /* Custom builder */
+  .custom-builder { padding: 16px; }
+  .custom-categories { grid-template-columns: 1fr; }
+  .custom-category select { font-size: 0.78rem; }
+
+  /* Cubase guide */
+  .cubase-guide { padding: 16px; }
+  .guide-tabs { gap: 4px; }
+  .guide-tab { font-size: 0.7rem; padding: 5px 10px; }
+  .guide-content { padding: 12px 14px; }
+  .guide-steps li { font-size: 0.78rem; }
+  .guide-tips li { font-size: 0.72rem; }
+
+  /* Footer */
+  .site-footer { padding: 24px 0 16px; margin-top: 24px; }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .app-header h1 { font-size: 1.3rem; }
+  .sel-btn { padding: 5px 8px; font-size: 0.72rem; }
+  .flow-node { font-size: 0.65rem; padding: 3px 6px; }
+  .chain-block { padding: 10px; }
+  .eq-graph { max-height: 150px; }
 }
