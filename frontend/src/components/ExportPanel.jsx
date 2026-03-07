@@ -144,6 +144,13 @@ export default function ExportPanel({ chain }) {
     pdf.save("vocalchain.pdf");
   };
 
+  const handleExportVstPreset = async () => {
+    if (!chain.eq) return;
+    const { downloadVstPreset } = await import("../utils/cubase-export");
+    const name = chain.eq.label || "VocalChainAI";
+    downloadVstPreset(chain.eq, name);
+  };
+
   return (
     <div className="export-panel">
       <h3>Export</h3>
@@ -153,6 +160,9 @@ export default function ExportPanel({ chain }) {
         <button className="export-btn" onClick={handleDownloadJSON}>Download JSON</button>
         <button className="export-btn" onClick={handleExportImage}>Save as PNG</button>
         <button className="export-btn" onClick={handleExportPDF}>Save as PDF</button>
+        <button className="export-btn experimental" onClick={handleExportVstPreset} title="Experimental: Cubase StudioEQ preset">
+          .vstpreset (Beta)
+        </button>
       </div>
     </div>
   );

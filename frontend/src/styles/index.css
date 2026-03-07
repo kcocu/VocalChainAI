@@ -697,6 +697,15 @@ body {
   background: var(--accent);
   color: #fff;
 }
+.export-btn.experimental {
+  border-color: var(--delay-color);
+  color: var(--delay-color);
+  border-style: dashed;
+}
+.export-btn.experimental:hover {
+  background: var(--delay-color);
+  color: #000;
+}
 
 /* ─── Reference Panel ─── */
 .reference-panel {
