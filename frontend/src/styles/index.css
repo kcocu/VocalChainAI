@@ -511,6 +511,134 @@ body {
 .eq-table td.cut { color: var(--cut); }
 .eq-table td.note { color: var(--text2); font-style: italic; }
 
+/* ─── Custom Builder ─── */
+.custom-builder-toggle {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.custom-toggle-btn {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  color: var(--text2);
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  transition: all 0.15s;
+  width: 100%;
+}
+.custom-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent2);
+}
+.custom-builder {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.custom-builder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.custom-builder-header h3 {
+  font-size: 1rem;
+  color: var(--accent2);
+}
+.custom-close-btn {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  padding: 4px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.75rem;
+}
+.custom-close-btn:hover {
+  border-color: var(--accent);
+}
+.custom-hint {
+  font-size: 0.78rem;
+  color: var(--text2);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.custom-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.custom-category label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text2);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.custom-category .required {
+  color: var(--cut);
+  margin-left: 2px;
+}
+.custom-category select {
+  width: 100%;
+  padding: 8px 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+.custom-category select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ─── Export Panel ─── */
+.export-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+.export-panel h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text2);
+  margin-bottom: 10px;
+}
+.export-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.export-btn {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  transition: all 0.15s;
+}
+.export-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
 /* ─── Footer ─── */
 .site-footer {
   text-align: center;

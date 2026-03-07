@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import ChainSelector from "./components/ChainSelector";
 import ChainResult from "./components/ChainResult";
+import ExportPanel from "./components/ExportPanel";
+import CustomBuilder from "./components/CustomBuilder";
 import { generateChain } from "./data/chains";
 
 function useLocalStorage(key, initial) {
@@ -133,11 +135,15 @@ export default function App() {
         </div>
       )}
 
+      <CustomBuilder onApply={(customChain) => setChain(customChain)} />
+
       <ChainResult
         chain={chain}
         isFavorite={isFavorite}
         onToggleFavorite={chain ? handleToggleFavorite : null}
       />
+
+      <ExportPanel chain={chain} />
 
       <footer className="site-footer">
         <p>VocalChainAI &mdash; EQ, Compressor, Delay, Reverb settings for vocal production</p>
